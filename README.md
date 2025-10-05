@@ -1,4 +1,3 @@
-// Declare the shapes list at the top
 ArrayList<MyShape> shapes;
 
 void setup() {
@@ -12,6 +11,7 @@ void setup() {
 void draw() {
   background(240);
   
+  // Use a for-each loop to display and update all shapes
   for (MyShape s : shapes) {
     s.update();
     s.display();
@@ -19,6 +19,7 @@ void draw() {
 }
 
 void mousePressed() {
+  // Add a new shape at mouse location
   shapes.add(new MyShape(mouseX, mouseY));
 }
 
